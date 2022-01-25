@@ -399,9 +399,10 @@ ol_style_FontSymbol.prototype.drawMarker_ = function(renderOptions, context, x, 
 
   // Draw the symbol
   if (this.glyph_.char) {
-    context.font = this.fontStyle_ +' '
-      + (2*tr.fac*(this.radius_)*this.fontSize_)+"px "
-      + this.glyph_.font;
+    //context.font = this.fontStyle_ +' '
+    //  + (2*tr.fac*(this.radius_)*this.fontSize_)+"px "
+    //  + this.glyph_.font;
+    context.font = "10px maki";
     context.strokeStyle = context.fillStyle;
     context.lineWidth = renderOptions.strokeWidth * (this.form_ == "none" ? 2:1);
     context.fillStyle = ol_color_asString(this.color_ || scolor);
